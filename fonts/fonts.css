@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'SBSansDisplay_Regular';
+  src: url(./SBSansDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'SBSansDisplay_Bold';
+  src: url(./SBSansDisplay-Bold.ttf);
+}

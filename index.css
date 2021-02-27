@@ -1,0 +1,977 @@
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+input, textarea, select {
+  outline: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+:root {}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, img, small, strike, strong, b, i, ol, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+li, form, label, table, tbody, tfoot, thead, tr, th, td, canvas, footer, header, menu, nav, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0;
+  background: linear-gradient(287.56deg, #0087CD 0%, #42E3B4 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #000000;
+  text-align: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  width: auto;
+  min-width: 320px;
+}
+
+.body {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.menu {
+  background-color: #FAED00;
+  width: 100%;
+  height: 69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 110px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.menuLink {
+  font-family: "SBSansDisplay_Regular";
+  font-size: 30px;
+  font-style: normal;
+  line-height: 69px;
+  margin-left: 50px;
+}
+
+.logoImg {
+  height: 51px;
+  width: auto;
+}
+
+.topImg {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  margin-top: -69px;
+  z-index: 1;
+}
+
+.topImgMobile, .menuBtn, .styleMobile {
+  display: none;
+}
+
+.broadcast {
+  background: url(./images/broadcast-bg.png) no-repeat center center / cover;
+  width: 100%;
+  /* height: 1200px; */
+  position: relative;
+  margin-top: -210px;
+  margin-bottom: -150px;
+  /* z-index: -1; */
+  padding-bottom: 30px;
+}
+
+.broadcastPlay {
+  width: 638px;
+  height: 140px;
+  background: #FAED00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 190px;
+  right: 50px;
+  border-radius: 100px;
+  box-shadow: 1px 0px 58px #FFFFFF;
+}
+
+.broadcastPlay img {
+  width: 194px;
+  height: 194px;
+  box-shadow: 0px 0px 68px 0px #faed00;
+  border-radius: 100%;
+}
+
+.broadcastCaption {
+  height: 107px;
+  width: auto;
+  display: block;
+  margin-top: 110px;
+  margin-left: -8.5%;
+  margin-bottom: 12px;
+}
+
+.broadcastBlock1 {
+  max-width: 1440px;
+  padding: 210px 50px 160px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.broadcastVideoBlock {
+  height: 100%;
+  width: 74%;
+  background: #0087CD;
+  border-radius: 23px;
+  margin-right: 2%;
+}
+
+.chat {
+  height: 100%;
+  width: 24%;
+  background: #0087CD;
+  border-radius: 23px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  padding: 7px 8px 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 300px;
+  position: relative;
+}
+
+.chatCaption {
+  width: 4.15%;
+  height: auto;
+  position: absolute;
+  top: 3px;
+  right: -4.4%;
+}
+
+.broadcastBlock2 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.messages, .messageInput {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 17px;
+  box-sizing: border-box;
+}
+
+.messages {
+  height: calc(100% - 104px);
+}
+
+.messageInput {
+  height: 94px;
+}
+
+.scheduleStyle {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+.scheduleBlock {
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 190px 0 0;
+  margin: -190px auto;
+  position: relative;
+}
+
+.scheduleScroll {
+  max-width: 81.7%;
+  width: 100%;
+  margin: 0 auto;
+  height: 590px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.scheduleScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scheduleScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #FF0066;
+  padding: 17px 0 7px;
+}
+
+.itemFirst {
+  padding: 0 0 7px;
+}
+
+.itemLast {
+  margin-bottom: 150px;
+}
+
+.itemLeft {
+  width: 17.5%;
+  margin-right: 47px;
+}
+
+.itemLeft p {
+  font-family: "SBSansDisplay_Bold";
+  font-size: 30px;
+  line-height: 38px;
+  text-align: left;
+  color: #0087CD;
+}
+
+.itemRight {
+  width: 64%;
+}
+
+.itemRight p {
+  font-family: "SBSansDisplay_Regular";
+  font-size: 30px;
+  line-height: 38px;
+  text-align: left;
+  color: #5C5C5C;
+}
+
+.scheduleGirl {
+  width: 25%;
+  height: auto;
+  display: block;
+  position: absolute;
+  right: -23px;
+  bottom: 50px;
+}
+
+.scheduleStyleLeft1 {
+  height: 101px;
+  width: auto;
+  left: 0;
+  top: 20px;
+  position: absolute;
+  display: block;
+  z-index: 4;
+}
+
+.scheduleStyleLeft2 {
+  height: 200px;
+  width: auto;
+  left: 0;
+  top: 121px;
+  position: absolute;
+  display: block;
+  z-index: 4;
+}
+
+.scheduleCaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.scheduleCaptionLeft, .scheduleCaptionRight {
+  height: 87px;
+  width: auto;
+  display: block;
+}
+
+.scheduleCaptionCenter {
+  height: 98px;
+  width: auto;
+  display: block;
+}
+
+.leadingCaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.leadingCaptionLeft, .leadingCaptionRight {
+  height: 87px;
+  width: auto;
+  display: block;
+}
+
+.leadingCaptionCenter {
+  height: 98px;
+  width: auto;
+  display: block;
+}
+
+.faceItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.faceItemImg {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+
+.faceItemImgBlock {
+  margin-right: 26px;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 8px #FAED00;
+}
+
+.faceCaption {
+  font-family: "SBSansDisplay_Bold";
+  font-size: 49px;
+  line-height: 63px;
+  text-align: left;
+}
+
+.faceDescription {
+  font-family: "SBSansDisplay_Regular";
+  font-size: 30px;
+  line-height: 38px;
+  text-align: left;
+  color: #FFFFFF;
+  max-width: 525px;
+}
+
+.faces {
+  position: relative;
+  padding: 0 0 50px;
+}
+
+.faceItem1 {
+  margin: 0 auto;
+  position: relative;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  top: 200px;
+}
+
+.faceItem2 {
+  margin: 0 auto;
+  position: relative;
+  left: 12.8%;
+  right: 0;
+  width: fit-content;
+  margin-top: 270px;
+}
+
+.facesStyle {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  margin-top: 0px;
+  z-index: 1;
+}
+
+.facesStyleLeftTop {
+  height: auto;
+  width: 35.8%;
+  left: 0;
+  top: 200px;
+  position: absolute;
+  display: block;
+  z-index: -2;
+}
+
+.leadingPeopleStyleRightTop {
+  height: auto;
+  width: 20%;
+  right: 0;
+  top: -630px;
+  position: absolute;
+  display: block;
+  z-index: 5;
+}
+
+.facesStyleRight {
+  height: 970px;
+  width: auto;
+  right: 0;
+  top: 550px;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+
+.speakersCaptionCenter {
+  height: 98px;
+  width: auto;
+  display: block;
+}
+
+.speakersCaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  left: 400px;
+  right: 0;
+}
+
+.faceItem3 {
+  margin: 0 auto;
+  position: relative;
+  left: -15%;
+  width: fit-content;
+  margin-top: 81px;
+}
+
+.faceItem4 {
+  margin: 0 auto;
+  position: relative;
+  left: 15%;
+  width: fit-content;
+  margin-top: 0px;
+}
+
+.faceItem5 {
+  margin: 0 auto;
+  position: relative;
+  left: -15%;
+  width: fit-content;
+  margin-top: 0px;
+}
+
+.speakers {
+  position: relative;
+}
+
+.speakersStyleLeft {
+  height: 643px;
+  width: auto;
+  left: 0;
+  top: 300px;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
+
+.facesStyleBottom {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  display: block;
+  z-index: -2;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -105px;
+}
+
+.footer {
+  background: #FF0066;
+  width: 100%;
+  height: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLogo {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.facesStyleMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1940px) {
+  .scheduleBlock {
+    padding: 150px 0 0;
+    margin: -150px auto;
+  }
+}
+
+@media only screen and (max-width: 1540px) {
+  .scheduleBlock {
+    padding: 125px 0 0;
+    margin: -125px auto;
+  }
+
+  .facesStyleLeftTop {
+    top: 300px;
+  }
+
+  .leadingPeopleStyleRightTop {
+    top: -500px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .speakersCaption {
+    left: 300px;
+  }
+
+  .leadingPeopleStyleRightTop {
+    top: -450px;
+  }
+
+  .broadcastCaption {
+    margin-left: -4%;
+    height: 88px;
+  }
+
+  .broadcastPlay {
+    width: 526px;
+    height: 115px;
+  }
+
+  .broadcastPlay img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .broadcastBlock2 {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .scheduleCaptionLeft, .scheduleCaptionRight, .leadingCaptionLeft, .leadingCaptionRight {
+    height: 60px;
+  }
+
+  .scheduleStyleLeft1 {
+    height: 80px;
+  }
+
+  .scheduleStyleLeft2 {
+    height: 150px;
+  }
+
+  .itemRight p {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .scheduleCaptionCenter, .leadingCaptionCenter, .speakersCaptionCenter {
+    height: 80px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .facesStyleLeftTop{
+    top: 350px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .scheduleBlock {
+    padding: 100px 0 0;
+    margin: -100px auto;
+  }
+
+  .scheduleCaptionLeft, .scheduleCaptionRight, .leadingCaptionLeft, .leadingCaptionRight {
+    height: 40px;
+  }
+
+  .scheduleCaptionCenter, .leadingCaptionCenter, .speakersCaptionCenter {
+    height: 60px;
+  }
+
+  .scheduleStyleLeft1 {
+    height: 60px;
+  }
+
+  .scheduleStyleLeft2 {
+    height: 100px;
+  }
+
+  .itemRight p, .itemLeft p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .speakersCaption {
+    left: 200px;
+  }
+
+  .facesStyleLeftTop {
+    top: 400px;
+  }
+
+  .broadcastPlay {
+    width: 420px;
+    height: 92px;
+  }
+
+  .broadcastPlay img {
+    width: 128px;
+    height: 128px;
+  }
+
+  .broadcastCaption {
+    height: 70px;
+  }
+
+  .faceItem3, .faceItem5, .faceItem4 {
+    left: 0;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .menuLink {
+    font-family: "SBSansDisplay_Bold";
+    font-size: 15px;
+    line-height: 41px;
+  }
+
+  .menu {
+    height: 41px;
+    padding: 0 50px;
+  }
+
+  .logoImg {
+    height: 25px;
+  }
+
+  .topImg {
+    margin-top: -41px;
+  }
+
+  .scheduleBlock {
+    padding: 80px 0 0;
+    margin: -80px auto;
+  }
+}
+
+@media only screen and (max-width: 868px) {
+  .itemLast {
+    margin-bottom: 0;
+  }
+
+  .broadcastPlay {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 30px;
+    position: relative;
+  }
+
+  .broadcastCaption {
+    margin: 100px auto 20px;
+  }
+
+  .broadcastBlock2 {
+    flex-direction: column;
+    height: auto !important;
+  }
+
+  .broadcastVideoBlock {
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+
+  .chat {
+    width: 100%;
+    height: 300px;
+  }
+
+  .chatCaption {
+    top: unset;
+    bottom: 11%;
+  }
+
+  .scheduleBlock {
+    padding: 0;
+    margin: 0 auto;
+    background: transparent;
+  }
+
+  .scheduleStyle, .scheduleCaptionLeft, .scheduleCaptionRight, .leadingCaptionLeft, .leadingCaptionRight, .scheduleStyleLeft1, .scheduleStyleLeft2, .scheduleGirl {
+    display: none;
+  }
+
+  .scheduleScroll {
+    overflow: auto;
+    height: auto;
+    max-width: 700px;
+  }
+
+  .broadcastBlock1 {
+    padding: 210px 50px 0px;
+  }
+
+  .broadcast {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .scheduleCaption, .leadingCaption, .speakersCaption {
+    margin: 15px auto 10px;
+    position: relative;
+    left: 0;
+  }
+
+  .scheduleScroll {
+    padding: 0 12px;
+  }
+
+  .itemLeft {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .itemLeft p {
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .item {
+    flex-direction: column;
+  }
+
+  .itemRight {
+    width: 100%;
+  }
+
+  .itemRight p {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .styleMobile {
+    display: block;
+    height: 28px;
+    width: auto;
+  }
+
+  .styleMobileLeft {
+    margin-right: -12px;
+  }
+
+  .styleMobileRight {
+    margin-left: -12px;
+  }
+
+  .facesStyleLeftTop, .facesStyleRight, .speakersStyleLeft, .facesStyleBottom {
+    display: none;
+  }
+
+  .faceItem1 {
+    top: 0;
+    margin-top: 50px;
+  }
+
+  .faceItem2 {
+    left: 0;
+    margin-top: 30px;
+  }
+
+  .leadingPeopleStyleRightTop {
+    top: -200px;
+    width: auto;
+    height: 920px;
+    right: -120px;
+    z-index: -2;
+  }
+
+  .faceCaption {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .faceDescription {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .faceItemImg {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .topImg, .menuLinks, .facesStyle {
+    display: none;
+  }
+
+  .faceItemImg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .faceItemImgBlock {
+    box-shadow: inset 0 0 0 3px #faed00;
+    margin-right: 10px;
+  }
+
+  .faceCaption {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .faceDescription {
+    font-size: 11px;
+    line-height: 14px;
+    max-width: 192px;
+  }
+
+  .topImgMobile, .menuBtn, .facesStyleMobile {
+    display: block;
+  }
+
+  .menuBtn {
+    width: 24px;
+    height: auto;
+    padding: 8px;
+  }
+
+  .menu {
+    padding: 0 6px 0 14px;
+  }
+
+  .menuLinksMobile {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    text-align: right;
+    background: #FAED00;
+    top: 40px;
+    right: 0;
+    width: 224px;
+    padding-top: 5px;
+  }
+
+  .menuLinksMobile .menuLink {
+    margin: 0;
+    padding-right: 5px;
+    line-height: 69px;
+  }
+
+  .broadcastBlock1 {
+    padding: 210px 12px 0;
+  }
+
+  .broadcastPlay {
+    width: 260px;
+    height: 57px;
+  }
+
+  .broadcastPlay img {
+    width: 74px;
+    height: 74px;
+  }
+
+  .broadcastBlock2 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .broadcastCaption {
+    height: auto;
+    width: 105%;
+    margin-left: -2.5%;
+    margin: 80px auto 19px -2.5%;
+  }
+
+  .broadcastVideoBlock {
+    margin-bottom: 25px;
+  }
+
+  .broadcastVideoBlock {
+    border-radius: 5px;
+  }
+
+  .broadcast {
+    background-size: 200%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .chat {
+    height: 493px;
+    width: 95%;
+    min-width: unset;
+  }
+
+  .chatCaption {
+    bottom: 11px;
+    width: auto;
+    height: 482px;
+    z-index: -1;
+    right: -15px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .scheduleCaptionCenter, .leadingCaptionCenter, .speakersCaptionCenter {
+    height: 45px;
+  }
+
+  .footer {
+    height: 41px;
+  }
+
+  .footerLogo {
+    height: 27px;
+  }
+}

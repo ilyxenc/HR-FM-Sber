@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>HR FM Sber</title>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="ru">
+  <meta name="generator" content="N/A">
+  <meta name="language" content="Russian">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link type="text/css" rel="stylesheet" href="./fonts/fonts.css">
+  <link type="text/css" rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+  <div class="body">
+    <div class="menu">
+      <div class="logo">
+        <img class="logoImg" src="./images/logo.png" alt="" />
+      </div>
+      <img class="menuBtn" src="./images/menu.png" alt="" />
+      <div class="menuLinks">
+        <a class="menuLink" href="#">трансляция</a>
+        <a class="menuLink" href="#">расписание</a>
+        <a class="menuLink" href="#">спикеры</a>
+      </div>
+      <script type="text/javascript">
+        let menu = document.querySelector(".menuBtn"),
+          menuBlock = document.querySelector(".menuLinks");
+
+        menu.addEventListener("click", () => {
+          if (menuBlock.classList.contains("menuLinksMobile")) {
+            menuBlock.className = "menuLinks";
+          } else {
+            menuBlock.className = "menuLinks menuLinksMobile";
+          }
+        });
+      </script>
+    </div>
+    <img class="topImg" src="./images/top.png" alt="">
+    <img class="topImg topImgMobile" src="./images/top-mobile.png" alt="" />
+
+    <div class="broadcast">
+      <div class="broadcastBlock1">
+        <!-- <a href="#">
+          <div class="broadcastPlay">
+            <img src="./images/play.png" alt="" />
+          </div>
+        </a> -->
+        <img class="broadcastCaption" src="./images/broadcast-caption.png" alt="" />
+        <div class="broadcastBlock2">
+          <div class="broadcastVideoBlock">
+            <!-- PLACE BROADCAST HERE -->
+          </div>
+          <script type="text/javascript">
+            let video = document.querySelector(".broadcastVideoBlock")
+            videoBlock = document.querySelector(".broadcastBlock2");
+
+            videoBlock.style.height = video.offsetWidth / 16 * 9 + "px";
+            video.style.height = video.offsetWidth / 16 * 9 + "px";
+
+            window.addEventListener("resize", () => {
+              videoBlock.style.height = video.offsetWidth / 16 * 9 + "px";
+              video.style.height = video.offsetWidth / 16 * 9 + "px";
+            })
+          </script>
+          <div class="chat">
+            <div class="messages">
+
+            </div>
+            <div class="messageInput">
+              <input style="width:100px;height:100px;font-size:30px;" type="text" name="" value="">
+            </div>
+          </div>
+          <img class="chatCaption" src="./images/chat.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="schedule">
+      <img class="scheduleStyle" src="./images/schedule/schedule-style.png" alt="" />
+      <div class="scheduleBlock">
+        <img class="scheduleStyleLeft1" src="./images/schedule/style-1.png" alt="" />
+        <img class="scheduleStyleLeft2" src="./images/schedule/style-2.png" alt="" />
+
+        <div class="scheduleCaption">
+          <img class="scheduleCaptionLeft" src="./images/schedule/style-4.png" alt="" />
+          <img class="styleMobile styleMobileLeft" src="./images/style-left.png" alt="" />
+          <img class="scheduleCaptionCenter" src="./images/schedule/caption.png" alt="" />
+          <img class="styleMobile styleMobileRight" src="./images/style-right.png" alt="" />
+          <img class="scheduleCaptionRight" src="./images/schedule/style-5.png" alt="" />
+        </div>
+        <div class="scheduleScroll">
+          <div class="item itemFirst">
+            <div class="itemLeft">
+              <p>
+                18:00-19:00
+              </p>
+            </div>
+            <div class="itemRight">
+              <p>
+                Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="itemLeft">
+              <p>
+                18:00-19:00
+              </p>
+            </div>
+            <div class="itemRight">
+              <p>
+                Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="itemLeft">
+              <p>
+                18:00-19:00
+              </p>
+            </div>
+            <div class="itemRight">
+              <p>
+                Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="itemLeft">
+              <p>
+                18:00-19:00
+              </p>
+            </div>
+            <div class="itemRight">
+              <p>
+                Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="itemLeft">
+              <p>
+                18:00-19:00
+              </p>
+            </div>
+            <div class="itemRight">
+              <p>
+                Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="itemLeft">
+              <p>
+                18:00-19:00
+              </p>
+            </div>
+            <div class="itemRight">
+              <p>
+                Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)
+              </p>
+            </div>
+          </div>
+          <div class="item itemLast">
+            <div class="itemLeft">
+              <p>
+                18:00-19:00
+              </p>
+            </div>
+            <div class="itemRight">
+              <p>
+                Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)Мероприятие #1 Название (Спикер-ФИО)
+              </p>
+            </div>
+          </div>
+        </div>
+        <img class="scheduleGirl" src="./images/schedule/style-3.png" alt="" />
+      </div>
+      <img class="scheduleStyle" src="./images/schedule/schedule-style-2.png" alt="" />
+    </div>
+
+    <div class="faces">
+      <div class="leading">
+        <img class="leadingPeopleStyleRightTop" src="./images/faces/people-style-right-top.png" alt="" />
+        <div class="leadingCaption">
+          <img class="leadingCaptionLeft" src="./images/leading-style-left.png" alt="" />
+          <img class="styleMobile styleMobileLeft" src="./images/style-left.png" alt="" />
+          <img class="leadingCaptionCenter" src="./images/leading-caption.png" alt="" />
+          <img class="styleMobile styleMobileRight" src="./images/style-right.png" alt="" />
+          <img class="leadingCaptionRight" src="./images/leading-style-right.png" alt="" />
+        </div>
+        <div class="faceItem faceItem1">
+          <div class="faceItemImgBlock">
+            <img class="faceItemImg" src="./images/faces/1.png" alt="" />
+          </div>
+          <div class="">
+            <p class="faceCaption">
+              Константин<br />Константинов
+            </p>
+            <p class="faceDescription">
+              Руководитель Директорцирковской
+            </p>
+          </div>
+        </div>
+        <div class="faceItem faceItem2">
+          <div class="faceItemImgBlock">
+            <img class="faceItemImg" src="./images/faces/1.png" alt="" />
+          </div>
+          <div class="">
+            <p class="faceCaption">
+              Константин<br />Константинов
+            </p>
+            <p class="faceDescription">
+              Руководитель Директорцирковской
+            </p>
+          </div>
+        </div>
+        <img class="facesStyleLeftTop" src="./images/faces/style-left-top.png" alt="" />
+        <img class="facesStyleRight" src="./images/faces/style-right.png" alt="" />
+        <img class="facesStyle" src="./images/faces/style.png" alt="" />
+        <img class="facesStyle facesStyleMobile" src="./images/faces/style-mobile.png" alt="" />
+      </div>
+      <div class="speakers">
+        <div class="speakersCaption">
+          <img class="styleMobile styleMobileLeft" src="./images/style-left.png" alt="" />
+          <img class="speakersCaptionCenter" src="./images/speakers-caption.png" alt="" />
+          <img class="styleMobile styleMobileRight" src="./images/style-right.png" alt="" />
+        </div>
+        <img class="speakersStyleLeft" src="./images/faces/style-left.png" alt="" />
+        <div class="faceItem faceItem3">
+          <div class="faceItemImgBlock">
+            <img class="faceItemImg" src="./images/faces/1.png" alt="" />
+          </div>
+          <div class="">
+            <p class="faceCaption">
+              Константин<br />Константинов
+            </p>
+            <p class="faceDescription">
+              Руководитель Директорцирковской
+            </p>
+          </div>
+        </div>
+        <div class="faceItem faceItem4">
+          <div class="faceItemImgBlock">
+            <img class="faceItemImg" src="./images/faces/1.png" alt="" />
+          </div>
+          <div class="">
+            <p class="faceCaption">
+              Константин<br />Константинов
+            </p>
+            <p class="faceDescription">
+              Руководитель Директорцирковской
+            </p>
+          </div>
+        </div>
+        <div class="faceItem faceItem5">
+          <div class="faceItemImgBlock">
+            <img class="faceItemImg" src="./images/faces/1.png" alt="" />
+          </div>
+          <div class="">
+            <p class="faceCaption">
+              Константин<br />Константинов
+            </p>
+            <p class="faceDescription">
+              Руководитель Директорцирковской
+            </p>
+          </div>
+        </div>
+        <div class="faceItem faceItem4">
+          <div class="faceItemImgBlock">
+            <img class="faceItemImg" src="./images/faces/1.png" alt="" />
+          </div>
+          <div class="">
+            <p class="faceCaption">
+              Константин<br />Константинов
+            </p>
+            <p class="faceDescription">
+              Руководитель Директорцирковской
+            </p>
+          </div>
+        </div>
+        <div class="faceItem faceItem5">
+          <div class="faceItemImgBlock">
+            <img class="faceItemImg" src="./images/faces/1.png" alt="" />
+          </div>
+          <div class="">
+            <p class="faceCaption">
+              Константин<br />Константинов
+            </p>
+            <p class="faceDescription">
+              Руководитель Директорцирковской
+            </p>
+          </div>
+        </div>
+        <div class="faceItem faceItem4">
+          <div class="faceItemImgBlock">
+            <img class="faceItemImg" src="./images/faces/1.png" alt="" />
+          </div>
+          <div class="">
+            <p class="faceCaption">
+              Константин<br />Константинов
+            </p>
+            <p class="faceDescription">
+              Руководитель Директорцирковской
+            </p>
+          </div>
+        </div>
+      </div>
+      <img class="facesStyleBottom" src="./images/faces/style-bottom.png" alt="" />
+    </div>
+    <div class="footer">
+      <img class="footerLogo" src="./images/logo-footer.png" alt="" />
+    </div>
+  </div>
+
+</body>
+
+</html>
