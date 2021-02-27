@@ -366,7 +366,7 @@ body {
   height: auto;
   display: block;
   position: absolute;
-  right: -23px;
+  right: 0;
   bottom: 50px;
 }
 
