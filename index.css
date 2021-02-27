@@ -637,7 +637,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1640px) {
   .speakersCaption {
     left: 300px;
   }
@@ -662,7 +662,7 @@ body {
   }
 
   .broadcastBlock2 {
-    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -1010,7 +1010,6 @@ body {
 
   .broadcastBlock2 {
     width: 100%;
-    max-width: 100%;
   }
 
   .broadcastCaption {
