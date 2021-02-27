@@ -28,6 +28,15 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, img, small,
   -webkit-tap-highlight-color: transparent;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 li, form, label, table, tbody, tfoot, thead, tr, th, td, canvas, footer, header, menu, nav, audio, video {
   margin: 0;
   padding: 0;
@@ -59,9 +68,13 @@ body {
   font-smoothing: antialiased;
   width: auto;
   min-width: 320px;
+  overflow: hidden;
+  overflow-x: hidden !important;
+  overflow-y: scroll;
 }
 
 .body {
+  width: 100%;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -176,6 +189,61 @@ body {
   position: relative;
 }
 
+.input {
+  font-size: 16px;
+  line-height: 22px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px 10px;
+  margin-top: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "SBSansDisplay_Regular";
+  resize: none;
+}
+
+.send {
+  width: 24px;
+  height: 24px;
+  display: block;
+  float: right;
+  margin-right: 12px;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.message {
+  max-width: 232px;
+  width: 100%;
+  background: #F8FCFF;
+  box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%);
+  text-align: left;
+  padding: 6px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.messageMy {
+  background: #42E3B4;
+  box-shadow: unset;
+  display: inline-block;
+}
+
+.messageName {
+  font-family: "SBSansDisplay_Bold";
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 3px;
+}
+
+.messageText {
+  font-family: "SBSansDisplay_Regular";
+  font-size: 12px;
+  line-height: 15px;
+}
+
 .chatCaption {
   width: 4.15%;
   height: auto;
@@ -199,6 +267,18 @@ body {
 
 .messages {
   height: calc(100% - 104px);
+  padding: 21px 27px;
+  overflow: scroll;
+  text-align: right;
+}
+
+.messages::-webkit-scrollbar {
+  display: none;
+}
+
+.messages {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .messageInput {
@@ -357,6 +437,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: min-content;
 }
 
 .faceItemImg {
@@ -400,7 +481,6 @@ body {
   position: relative;
   left: 0;
   right: 0;
-  width: fit-content;
   top: 200px;
 }
 
@@ -409,7 +489,6 @@ body {
   position: relative;
   left: 12.8%;
   right: 0;
-  width: fit-content;
   margin-top: 270px;
 }
 
@@ -425,6 +504,7 @@ body {
 .facesStyleLeftTop {
   height: auto;
   width: 35.8%;
+  max-width: 690px;
   left: 0;
   top: 200px;
   position: absolute;
@@ -473,7 +553,6 @@ body {
   margin: 0 auto;
   position: relative;
   left: -15%;
-  width: fit-content;
   margin-top: 81px;
 }
 
@@ -481,7 +560,6 @@ body {
   margin: 0 auto;
   position: relative;
   left: 15%;
-  width: fit-content;
   margin-top: 0px;
 }
 
@@ -489,7 +567,6 @@ body {
   margin: 0 auto;
   position: relative;
   left: -15%;
-  width: fit-content;
   margin-top: 0px;
 }
 
@@ -612,7 +689,7 @@ body {
 }
 
 @media only screen and (max-width: 1350px) {
-  .facesStyleLeftTop{
+  .facesStyleLeftTop {
     top: 350px;
   }
 }
@@ -651,7 +728,7 @@ body {
   }
 
   .facesStyleLeftTop {
-    top: 400px;
+    top: 450px;
   }
 
   .broadcastPlay {
@@ -697,6 +774,12 @@ body {
   .scheduleBlock {
     padding: 80px 0 0;
     margin: -80px auto;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .facesStyleLeftTop {
+    top: 500px;
   }
 }
 
@@ -850,6 +933,10 @@ body {
 }
 
 @media only screen and (max-width: 668px) {
+  .messages {
+    padding: 21px 10px;
+  }
+
   .topImg, .menuLinks, .facesStyle {
     display: none;
   }
