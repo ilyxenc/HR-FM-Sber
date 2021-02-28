@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pop Up HR FM Sber</title>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="ru">
+  <meta name="generator" content="N/A">
+  <meta name="language" content="Russian">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link type="text/css" rel="stylesheet" href="./../fonts/fonts.css">
+  <link type="text/css" rel="stylesheet" href="./pop-up.css">
+
+</head>
+
+<body>
+
+  <div class="popUp">
+    <div class="popUpInside">
+      <div class="popUpData">
+
+        <div class="popUpCaption popUpCaptionLarge">
+          <img class="popUpStyle" src="./../images/pop-up-style.png" alt="" />
+          <p class="popUpCaptionText">
+            Вопрос №2
+          </p>
+          <img class="popUpStyle popUpStyleRight" src="./../images/pop-up-style.png" alt="" />
+        </div>
+
+        <div class="popUpContent popUpContent3 popUpContentAnswer">
+          <p class="popUpQuestion">
+            Мой праздник это…
+          </p>
+          <div class="popUpAnswerOptions popUpMarginTop60 popUpAnswerOptionsResultsMobile">
+            <div class="popUpAnswerOptionsItem popUpAnswerOptionsItemAnswer">
+              <p class="popUpAnswerOptionsItemText">
+                23 февраля
+              </p>
+              <div class="popUpAnswerPercent" data-result="50"><div></div><span></span></div>
+            </div>
+            <div class="popUpAnswerOptionsItem popUpAnswerOptionsItemAnswer">
+              <p class="popUpAnswerOptionsItemText">
+                8 марта
+              </p>
+              <div class="popUpAnswerPercent" data-result="50"><div></div><span></span></div>
+            </div>
+          </div>
+          <script type="text/javascript">
+            let answer = document.querySelectorAll(".popUpAnswerPercent");
+
+            answer.forEach((item, i) => {
+              console.log(item.dataset.result);
+              item.querySelector("div").style.width = item.dataset.result + "%";
+              item.querySelector("span").innerHTML = item.dataset.result + "%";
+            });
+
+          </script>
+
+          <span class="popUpButton popUpMarginTop60">ЗАКРЫТЬ</span>
+        </div>
+
+        <img class="popUpBG" src="./../images/pop-up.png" alt="" />
+        <img class="popUpBG popUpBGMobile" src="./../images/pop-up-2.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

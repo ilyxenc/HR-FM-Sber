@@ -7,3 +7,8 @@
   font-family: 'SBSansDisplay_Bold';
   src: url(./SBSansDisplay-Bold.ttf);
 }
+
+@font-face {
+  font-family: 'Druk_Wide_Medium_Cy';
+  src: url(./Druk_Wide_Medium_Cy.otf);
+}

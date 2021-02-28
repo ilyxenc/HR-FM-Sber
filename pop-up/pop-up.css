@@ -1,0 +1,538 @@
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+input, textarea, select {
+  outline: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+:root {}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, img, small, strike, strong, b, i, ol, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+li, form, label, table, tbody, tfoot, thead, tr, th, td, canvas, footer, header, menu, nav, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0;
+  background: #FFFFFF;
+  color: #000000;
+  text-align: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  min-width: 320px;
+}
+
+.popUp {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.popUpInside {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  height: inherit;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.popUpData {
+  background: linear-gradient(287.56deg, #0087CD 0%, #42E3B4 100%);
+  border-radius: 50px;
+  max-width: 1024px;
+  width: 100%;
+  min-height: 768px;
+  position: relative;
+  overflow: hidden;
+}
+
+.popUpBG {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.popUpLogo {
+  height: 52px;
+  width: auto;
+  display: block;
+  margin: 46px auto 34px;
+}
+
+.popUpCaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 68px auto 0;
+}
+
+.popUpCaptionLarge {
+  margin: 48px auto 0;
+}
+
+.popUpCaptionText {
+  background: #FF0066;
+  font-family: "Druk_Wide_Medium_Cy";
+  font-size: 33px;
+  line-height: 65px;
+  width: 362px;
+  text-align: center;
+  border-radius: 100px;
+  color: #FAED00;
+}
+
+.popUpStyle {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin-right: 4px;
+}
+
+.popUpStyleRight {
+  margin-right: 0;
+  margin-left: 4px;
+  transform: rotate(180deg);
+}
+
+.popUpLogo, .popUpCaption, .popUpContent {
+  position: relative;
+  z-index: 1;
+}
+
+.popUpCaptionEntrance .popUpStyle {
+  height: 75px;
+  margin-right: 6px;
+}
+
+.popUpCaptionEntrance .popUpStyleRight {
+  margin-left: 6px;
+}
+
+.popUpCaptionEntrance .popUpCaptionText {
+  font-size: 64px;
+  line-height: 125px;
+  width: 692px;
+}
+
+.popUpCaptionEntrance {
+  margin-bottom: -30px;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+}
+
+.popUpContent {
+  padding: 38px 46px 0;
+  border-radius: 33px;
+  background: #FFFFFF;
+  width: 84.5%;
+  box-sizing: border-box;
+  margin: 32px auto;
+}
+
+.popUpContent1 {
+  height: 569px;
+}
+
+.popUpContent2 {
+  height: 595px;
+}
+
+.popUpContent3 {
+  height: 377px;
+}
+
+.popUpContentAnswer {
+  padding: 16px 46px 0;
+}
+
+.popUpContentLarge {
+  margin-top: 64px;
+}
+
+.popUpContentEntrance {
+  margin: 0 auto;
+  padding: 38px 46px 58px;
+  height: auto;
+}
+
+.popUpQuestion {
+  background: #21BA72;
+  border-radius: 100px;
+  min-height: 66px;
+  width: 100%;
+  color: #FFFFFF;
+  font-family: "SBSansDisplay_Bold";
+  font-size: 25px;
+  line-height: 32px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.popUpQuestionEntrance {
+  color: #000000;
+  background: #FFFFFF;
+}
+
+.popUpInput {
+  font-family: "SBSansDisplay_Bold";
+  color: #FFFFFF;
+  font-size: 40px;
+  line-height: 129px;
+  width: 651px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: #A0E720;
+  box-shadow: inset 0px 4px 7px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.popUpButton {
+  background: linear-gradient(287.56deg, #0087CD 0%, #42E3B4 100%);
+  box-shadow: 0px 2.5124px 2.5124px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  width: 152px;
+  font-family: "SBSansDisplay_Bold";
+  font-size: 16px;
+  line-height: 42px;
+  text-align: center;
+  display: block;
+  color: #FFFFFF;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.popUpButtonEntrance {
+  width: 242px;
+  font-size: 25px;
+  line-height: 67px;
+  margin: 43px auto 0;
+}
+
+.popUpAnswerOptionsItem {
+  max-width: 426px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto 8px;
+  padding: 3px 0 3px 5px;
+  cursor: pointer;
+}
+
+.popUpCircle {
+  background: #21BA72;
+  border: 0.6875px solid #42E3B4;
+  box-sizing: border-box;
+  border-radius: 100px;
+  width: 22px;
+  height: 22px;
+  display: block;
+  margin-right: 20px;
+}
+
+.popUpAnswerOptionsItemText {
+  font-family: "SBSansDisplay_Regular";
+  font-size: 18px;
+  line-height: 23px;
+  text-align: left;
+}
+
+.popUpAnswerOptionsItem:hover .popUpCircle {
+  background: #42E3B4;
+  border: 0.6875px solid #FAED00;
+}
+
+.popUpAnswerOptionsItem:hover {
+  background: #FAED00;
+  border-radius: 100px;
+  transition: 0.2s;
+}
+
+.popUpAnswerOptionsItemAnswer {
+  cursor: default;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.popUpAnswerOptionsItemAnswer:hover {
+  background: transparent;
+}
+
+.popUpAnswerOptionsItemAnswered .popUpCircle div {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  margin-top: 4px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  box-sizing: border-box;
+  box-shadow: 0px 2.75px 2.75px rgba(0, 0, 0, 0.25);
+}
+
+.popUpAnswerPercent {
+  border-radius: 100px;
+  height: 10px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 0.5px solid #BDBDBD;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 3px;
+}
+
+.popUpAnswerPercent div {
+  background: #FAED00;
+  height: 100%;
+  /* width: auto; */
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+.popUpAnswerPercent span {
+  font-family: "SBSansDisplay_Regular";
+  font-size: 8px;
+  line-height: 10px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 3px;
+}
+
+.popUpMarginTop20 {
+  margin-top: 20px;
+}
+
+.popUpMarginTop28 {
+  margin-top: 28px;
+}
+
+.popUpMarginTop60 {
+  margin-top: 60px;
+}
+
+.popUpMarginTop84 {
+  margin-top: 84px;
+}
+
+.popUpBGMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 868px) {
+  .popUpData {
+    min-height: 568px;
+  }
+
+  .popUpCaption, .popUpCaptionLarge {
+    margin: 15px auto 0;
+  }
+
+  .popUpCaptionText {
+    font-size: 19px;
+    line-height: 37px;
+    width: 204px;
+  }
+
+  .popUpStyle {
+    height: 22px;
+    margin-right: 1px;
+  }
+
+  .popUpStyleRight {
+    margin-left: 1px;
+  }
+
+  .popUpContent, .popUpContent1, .popUpContentLarge, .popUpContent2, .popUpContent3, .popUpContentAnswer {
+    margin-top: 0px;
+    padding: 11px 0 0;
+    background: transparent;
+    width: 100%;
+    height: auto;
+  }
+
+  .popUpQuestion {
+    min-height: 49px;
+    font-size: 19px;
+    line-height: 24px;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .popUpAnswerOptions {
+    padding: 28px 11px;
+    margin: auto;
+  }
+
+  .popUpAnswerOptionsResultsMobile {
+    padding: 20px 18px 0;
+    margin: auto;
+  }
+
+  .popUpAnswerOptionsItemText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .popUpCircle {
+    width: 15px;
+    height: 15px;
+  }
+
+  .popUpAnswerOptionsItem {
+    background: #FFFFFF;
+    border-radius: 100px;
+    margin: 0 auto 20px;
+  }
+
+  .popUpAnswerOptionsItemAnswered .popUpCircle div {
+    width: 9px;
+    height: 9px;
+    margin-left: 2px;
+    margin-top: 2px;
+  }
+
+  .popUpBG {
+    display: none;
+  }
+
+  .popUpBGMobile {
+    display: block;
+  }
+
+  .popUpAnswerOptionsItemAnswer {
+    background: transparent;
+    align-items: flex-end;
+    margin: 0 auto 7px;
+  }
+
+  .popUpAnswerOptionsItemAnswer .popUpAnswerOptionsItemText {
+    background: #FFFFFF;
+    width: 100%;
+    border-radius: 100px;
+    box-sizing: border-box;
+    padding-left: 3px;
+  }
+
+  .popUpAnswerPercent span {
+    font-size: 10px;
+    line-height: 13px;
+    right: auto;
+    left: -10%;
+    top: -1.5px;
+  }
+
+  .popUpAnswerPercent {
+    width: 90%;
+  }
+
+  .popUpButton {
+    margin-top: 34px;
+  }
+
+  .popUpLogo {
+    margin: 62px auto 24px;
+  }
+
+  .popUpCaptionEntrance {
+    margin: 0 auto -19px;
+  }
+
+  .popUpCaptionEntrance .popUpCaptionText {
+    font-size: 32px;
+    line-height: 49px;
+    width: 273px;
+  }
+
+  .popUpCaptionEntrance .popUpStyle {
+    height: 30px;
+  }
+
+  .popUpCaptionEntrance .popUpStyleRight {
+    margin-right: 0px;
+  }
+
+  .popUpContentEntrance {
+    background: #FFFFFF;
+    border-radius: 0;
+    padding: 0 0 50px;
+  }
+
+  .popUpQuestionEntrance {
+    font-size: 12px;
+    line-height: 15px;
+    min-height: 25px;
+    padding-top: 41px;
+    margin: 0 auto 29px;
+  }
+
+  .popUpInput {
+    width: 300px;
+    line-height: 60px;
+    font-size: 26px;
+  }
+
+  .popUpButtonEntrance {
+    width: 152px;
+    line-height: 42px;
+    font-size: 16px;
+  }
+}
