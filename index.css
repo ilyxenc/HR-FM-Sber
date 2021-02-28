@@ -75,8 +75,7 @@ body {
 
 .body {
   width: 100%;
-  /* overflow: hidden;
-  overflow-y: scroll; */
+  overflow-x: hidden;
 }
 
 .menu {
@@ -208,6 +207,7 @@ body {
   display: block;
   float: right;
   margin-right: 12px;
+  cursor: pointer;
 }
 
 .input::placeholder {
@@ -792,6 +792,7 @@ body {
   .faceItem {
     min-width: 600px;
   }
+
   .itemLast {
     margin-bottom: 0;
   }
@@ -940,7 +941,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 768px) {
   .messages {
     padding: 21px 10px;
   }
@@ -1054,6 +1055,7 @@ body {
     z-index: -1;
     right: -15px;
   }
+
   .faceItem {
     min-width: 300px;
   }

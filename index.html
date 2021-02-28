@@ -10,10 +10,47 @@
   <meta http-equiv="Content-Language" content="ru">
   <meta name="generator" content="N/A">
   <meta name="language" content="Russian">
-  <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 
   <link type="text/css" rel="stylesheet" href="./fonts/fonts.css">
   <link type="text/css" rel="stylesheet" href="./index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      let menu = document.querySelector(".menuBtn"),
+        menuBlock = document.querySelector(".menuLinks");
+
+      $("a[href^='#']").click(function(event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+          //узнаем высоту от начала страницы до блока на который ссылается якорь
+          top = $(id).offset().top - 30;
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({
+          scrollTop: top
+        }, 500);
+
+        if (menuBlock.classList.contains("menuLinksMobile")) {
+          menuBlock.className = "menuLinks";
+        } else {
+          menuBlock.className = "menuLinks menuLinksMobile";
+        }
+      });
+
+      menu.addEventListener("click", () => {
+        if (menuBlock.classList.contains("menuLinksMobile")) {
+          menuBlock.className = "menuLinks";
+        } else {
+          menuBlock.className = "menuLinks menuLinksMobile";
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -31,16 +68,7 @@
         <a class="menuLink" href="#speakers">спикеры</a>
       </div>
       <script type="text/javascript">
-        let menu = document.querySelector(".menuBtn"),
-          menuBlock = document.querySelector(".menuLinks");
 
-        menu.addEventListener("click", () => {
-          if (menuBlock.classList.contains("menuLinksMobile")) {
-            menuBlock.className = "menuLinks";
-          } else {
-            menuBlock.className = "menuLinks menuLinksMobile";
-          }
-        });
       </script>
     </div>
     <img class="topImg" src="./images/top.png" alt="">
@@ -139,13 +167,13 @@
       </div>
     </div>
 
-    <div class="schedule" id="schedule">
+    <div class="schedule">
       <img class="scheduleStyle" src="./images/schedule/schedule-style.png" alt="" />
       <div class="scheduleBlock">
         <img class="scheduleStyleLeft1" src="./images/schedule/style-1.png" alt="" />
         <img class="scheduleStyleLeft2" src="./images/schedule/style-2.png" alt="" />
 
-        <div class="scheduleCaption">
+        <div class="scheduleCaption" id="schedule">
           <img class="scheduleCaptionLeft" src="./images/schedule/style-4.png" alt="" />
           <img class="styleMobile styleMobileLeft" src="./images/style-left.png" alt="" />
           <img class="scheduleCaptionCenter" src="./images/schedule/caption.png" alt="" />
