@@ -616,6 +616,64 @@ body {
   display: none;
 }
 
+.popUpINDEX {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 100000px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.popUpINDEXInside {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  height: inherit;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* z-index: ; */
+}
+
+.popUpINDEXNoScroll {
+  overflow: hidden;
+}
+
+.popUpINDEXData {
+  background: linear-gradient(287.56deg, #0087CD 0%, #42E3B4 100%);
+  border-radius: 50px;
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.popUpINDEXData p {
+  font-family: "SBSansDisplay_Bold";
+  font-size: 25px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.popUpINDEXData p a {
+  color: #FAED00;
+}
+
+.popUpINDEXData p a:hover {
+  transition: 0.3s;
+  opacity: 0.6;
+}
+
 @media only screen and (max-width: 1940px) {
   .scheduleBlock {
     padding: 150px 0 0;
@@ -1058,6 +1116,11 @@ body {
 
   .faceItem {
     min-width: 300px;
+  }
+
+  .popUpINDEXData {
+    padding: 30px;
+    border-radius: 23px;
   }
 }
 
